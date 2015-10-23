@@ -5,19 +5,52 @@
 		
 		<title>Motivational Penguin</title>
 		
+		<meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="You can do it! Believe in yourself. Smile! :)">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
 		<style>
 			
+			* {
+				transition: opacity 0.5s linear;
+			}
+			
 			body {
-				min-height: 90vh;
+				min-height: 97vh;
 				display: flex;
+				flex-direction: column;
 				align-items: center;
-				justify-content: center;
+				justify-content: space-between;
+				font-family: "Proxima Nova", "Helvetica Neue", "Source Sans Pro", "Gill Sans", sans-serif;
+			}
+			
+			a {
+				color: currentColor;
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
 			}
 			
 			.penguin {
 				display: block;
+				align-self: center;
 			}
 			
+			.quiet {
+				color: rgba(0,0,0,0.3);
+			}
+			
+			.footer {
+				width: 100%;
+				font-size: .7rem;
+				text-align: center;
+				opacity: .2;
+			}
+			.footer:hover {
+				opacity: .8;
+			}
 						
 		</style>
 		
@@ -48,7 +81,32 @@
 	
 	<body>
 		
-		<img class="penguin" src="./assets/images/penguin.gif">		
+		<div class="header"></div>
+		
+		<img class="penguin" src="./assets/images/penguin.gif">
+		
+		<div class="footer">
+
+			<a href="https://twitter.com/PenMGuin" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @PenMGuin</a>
+
+			<p>drawn by <strong><a href="http://chibird.com/">chibird</a></strong>. website'd by <strong>Very Nice Code</strong>.</p>
+		</div>
+		
+		<script>
+			!function(d,s,id){
+				var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+				if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}
+			}(document, 'script', 'twitter-wjs');
+		</script>
+		
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');		
+			ga('create', 'UA-69209011-2', 'auto');
+			ga('send', 'pageview');
+		</script>	
 		
 	</body>
 	
