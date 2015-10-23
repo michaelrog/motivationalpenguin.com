@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		
+		<title>Motivational Penguin</title>
+		
+		<style>
+			
+			body {
+				min-height: 90vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			
+			.penguin {
+				display: block;
+			}
+			
+						
+		</style>
+		
+		<script>
+			
+			var thingsPenguinSays = [
+				"you can do it!"
+				, "believe in yourself."
+				, "work hard!"
+				, "keep fighting!"
+				, "don't give up on your dreams."
+				, "smile!  :)"
+			];
+			
+			var i = 0;
+			
+			var sayNewThing = function sayNewThing() {
+				document.title = thingsPenguinSays[i];
+				console.log(thingsPenguinSays[i]);
+				i = (i == thingsPenguinSays.length - 1 ? 0 : i+1);
+			};
+			
+			var timer = window.setInterval(sayNewThing, 1000);
+			
+		</script>
+		
+	</head>
+	
+	<body>
+		
+		<img class="penguin" src="./assets/images/penguin.gif">		
+		
+	</body>
+	
+</html>
