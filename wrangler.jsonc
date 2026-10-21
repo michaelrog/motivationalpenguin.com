@@ -1,0 +1,25 @@
+{
+  "name": "com-motivationalpenguin",
+  "compatibility_date": "2026-10-21",
+  "main": "./src/index.js",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    // Run the Worker first on so it can redirect `www` to canonical.
+    "run_worker_first": true
+  },
+  "observability": {
+    "enabled": true
+  },
+  "routes": [
+    {
+      "pattern": "motivationalpenguin.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.motivationalpenguin.com",
+      "custom_domain": true
+    }
+  ],
+  "workers_dev": false
+}
